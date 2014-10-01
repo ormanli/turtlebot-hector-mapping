@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find gazebo_ros)/launch/willowgarage_world.launch" />
+  <include file="$(find turtlebot_hector_mapping)/launch/spawn_laser_turtlebot.launch" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot_hector_mapping)/rviz/hector_turtlebot.rviz" />
+  <include file="$(find hector_mapping)/launch/mapping_default.launch">
+    <arg name="pub_map_odom_transform" value="false" />
+    <arg name="base_frame" value="base_footprint" />
+    <arg name="scan_topic" value="hokuyo_scan" />
+    <arg name="odom_frame" value="odom" />
+  </include>
+  <include file="$(find hector_geotiff)/launch/geotiff_mapper.launch">
+    <arg name="trajectory_publish_rate" value="4" />
+  </include>
+  <node pkg="tf" type="static_transform_publisher" name="odom_to_map" args="0 0 0 0 0 0 /map /odom 100" />
+</launch>

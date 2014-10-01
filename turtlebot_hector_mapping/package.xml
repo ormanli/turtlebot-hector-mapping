@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <name>turtlebot_hector_mapping</name>
+  <version>1.0.0</version>
+  <description>Hector mapping with turtlebot</description>
+  <maintainer email="email@email.com">Serdar Ormanlı</maintainer>
+  <license>DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>hector_sensors_description</build_depend>
+  <build_depend>turtlebot_description</build_depend>
+  <build_depend>turtlebot_gazebo</build_depend>
+  <build_depend>hector_sensors_description</build_depend>
+  <build_depend>hector_mapping</build_depend>
+  <run_depend>hector_sensors_description</run_depend>
+  <run_depend>turtlebot_description</run_depend>
+  <run_depend>turtlebot_gazebo</run_depend>
+  <run_depend>hector_sensors_description</run_depend>
+  <run_depend>hector_mapping</run_depend>
+</package>
