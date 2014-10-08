@@ -3,7 +3,7 @@ turtlebot-hector-mapping
 
 Hector mapping launch with turtlebot. Inspired from https://github.com/tu-darmstadt-ros-pkg/hector_turtlebot
 
-Copy to your catkin workspace and build workspace.
+Copy to your catkin workspace and build workspace. Use teleop to control turtlebot.
 
 
 To run
